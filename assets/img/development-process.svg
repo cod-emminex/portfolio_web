@@ -1,0 +1,126 @@
+<svg width="600" height="600" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .code-line { stroke-dasharray: 120; stroke-dashoffset: 120; animation: dash 3s ease-in-out forwards infinite; }
+    .code-line:nth-child(2) { animation-delay: 0.2s; }
+    .code-line:nth-child(3) { animation-delay: 0.4s; }
+    .code-line:nth-child(4) { animation-delay: 0.6s; }
+    .code-line:nth-child(5) { animation-delay: 0.8s; }
+    .circle { transform-origin: center; animation: pulse 2s ease-in-out infinite; }
+    .circle:nth-child(2) { animation-delay: 0.5s; }
+    .circle:nth-child(3) { animation-delay: 1s; }
+    .gear { transform-origin: center; animation: rotate 10s linear infinite; }
+    .gear-reverse { transform-origin: center; animation: rotate-reverse 8s linear infinite; }
+    
+    @keyframes dash {
+      0% { stroke-dashoffset: 120; }
+      50% { stroke-dashoffset: 0; }
+      100% { stroke-dashoffset: 120; }
+    }
+    
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 0.7; }
+      50% { transform: scale(1.05); opacity: 1; }
+      100% { transform: scale(1); opacity: 0.7; }
+    }
+    
+    @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    
+    @keyframes rotate-reverse {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(-360deg); }
+    }
+  </style>
+  
+  <!-- Background Elements -->
+  <circle cx="300" cy="300" r="250" fill="#f8fafc" />
+  <circle cx="300" cy="300" r="200" fill="#f1f5f9" class="circle" />
+  <circle cx="300" cy="300" r="150" fill="#e2e8f0" class="circle" />
+  
+  <!-- Process Arrows -->
+  <path d="M300 100C415 100 500 185 500 300C500 415 415 500 300 500C185 500 100 415 100 300C100 185 185 100 300 100Z" stroke="#cbd5e1" stroke-width="6" stroke-dasharray="15 10" />
+  
+  <!-- Development Flow Icons -->
+  
+  <!-- Requirements Icon -->
+  <g transform="translate(200, 150)">
+    <rect x="0" y="0" width="60" height="80" rx="5" fill="#4f46e5" />
+    <rect x="10" y="15" width="40" height="5" rx="2" fill="white" />
+    <rect x="10" y="30" width="25" height="5" rx="2" fill="white" />
+    <rect x="10" y="45" width="35" height="5" rx="2" fill="white" />
+    <rect x="10" y="60" width="30" height="5" rx="2" fill="white" />
+    <text x="30" y="100" font-family="'Inter', sans-serif" font-size="14" fill="#1e293b" text-anchor="middle">Plan</text>
+  </g>
+  
+  <!-- Code Icon -->
+  <g transform="translate(340, 220)">
+    <rect x="0" y="0" width="70" height="60" rx="5" fill="#4f46e5" />
+    <line x1="10" y1="15" x2="40" y2="15" stroke="white" stroke-width="3" class="code-line" />
+    <line x1="10" y1="25" x2="60" y2="25" stroke="white" stroke-width="3" class="code-line" />
+    <line x1="10" y1="35" x2="50" y2="35" stroke="white" stroke-width="3" class="code-line" />
+    <line x1="10" y1="45" x2="45" y2="45" stroke="white" stroke-width="3" class="code-line" />
+    <text x="35" y="80" font-family="'Inter', sans-serif" font-size="14" fill="#1e293b" text-anchor="middle">Develop</text>
+    
+    <!-- Gear Icon for Development -->
+    <circle cx="85" cy="15" r="15" fill="#10b981" class="gear" />
+    <circle cx="85" cy="15" r="5" fill="white" />
+    <path d="M85 0L88 5H82L85 0Z" fill="white" />
+    <path d="M85 30L88 25H82L85 30Z" fill="white" />
+    <path d="M70 15L75 18V12L70 15Z" fill="white" />
+    <path d="M100 15L95 18V12L100 15Z" fill="white" />
+  </g>
+  
+  <!-- Test Icon -->
+  <g transform="translate(340, 350)">
+    <rect x="0" y="0" width="60" height="60" rx="5" fill="#4f46e5" />
+    <circle cx="30" cy="20" r="10" stroke="white" stroke-width="2" fill="none" />
+    <line x1="30" y1="30" x2="30" y2="40" stroke="white" stroke-width="2" />
+    <line x1="20" y1="50" x2="40" y2="50" stroke="white" stroke-width="2" />
+    <text x="30" y="80" font-family="'Inter', sans-serif" font-size="14" fill="#1e293b" text-anchor="middle">Test</text>
+  </g>
+  
+  <!-- Deploy Icon -->
+  <g transform="translate(200, 420)">
+    <rect x="0" y="0" width="60" height="60" rx="5" fill="#4f46e5" />
+    <path d="M30 10L45 40H15L30 10Z" fill="white" />
+    <rect x="15" y="40" width="30" height="10" rx="2" fill="white" />
+    <text x="30" y="80" font-family="'Inter', sans-serif" font-size="14" fill="#1e293b" text-anchor="middle">Deploy</text>
+  </g>
+  
+  <!-- Process Flow Arrows -->
+  <g opacity="0.7">
+    <path d="M245 190L330 230" stroke="#64748b" stroke-width="3" marker-end="url(#arrowhead)" />
+    <path d="M370 290L370 340" stroke="#64748b" stroke-width="3" marker-end="url(#arrowhead)" />
+    <path d="M330 380L245 420" stroke="#64748b" stroke-width="3" marker-end="url(#arrowhead)" />
+    <path d="M185 420L185 200" stroke="#64748b" stroke-width="3" marker-end="url(#arrowhead)" />
+  </g>
+  
+  <!-- Arrowhead Marker -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#64748b" />
+    </marker>
+  </defs>
+  
+  <!-- Central Programming Elements -->
+  <g transform="translate(235, 270)">
+    <!-- Gear Elements -->
+    <circle cx="30" cy="30" r="25" fill="#f97316" class="gear-reverse" />
+    <circle cx="30" cy="30" r="10" fill="white" />
+    <path d="M30 5L35 10H25L30 5Z" fill="white" />
+    <path d="M30 55L35 50H25L30 55Z" fill="white" />
+    <path d="M5 30L10 35V25L5 30Z" fill="white" />
+    <path d="M55 30L50 35V25L55 30Z" fill="white" />
+    
+    <path d="M5 15L13 20L8 25L5 15Z" fill="white" transform="rotate(30 30 30)" />
+    <path d="M55 45L47 40L52 35L55 45Z" fill="white" transform="rotate(30 30 30)" />
+    
+    <path d="M15 5L20 13L25 8L15 5Z" fill="white" transform="rotate(60 30 30)" />
+    <path d="M45 55L40 47L35 52L45 55Z" fill="white" transform="rotate(60 30 30)" />
+    
+    <text x="30" y="80" font-family="'Inter', sans-serif" font-size="14" fill="#1e293b" text-anchor="middle">Continuous</text>
+    <text x="30" y="100" font-family="'Inter', sans-serif" font-size="14" fill="#1e293b" text-anchor="middle">Integration</text>
+  </g>
+</svg>
